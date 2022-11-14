@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:padding="55dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:checkable="false"
+        app:strokeColor="@color/material_on_background_disabled"
+        app:strokeWidth="3dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ProgressBar
+        android:layout_below="@id/imageView"
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_below="@id/progressBar"
+        android:id="@+id/btnRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_lbl_refresh"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnRefresh"
+        android:textColor="@color/design_default_color_error"
+        android:id="@+id/txtError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/error_no_connection" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Picsum-java</string>
+    <string name="btn_lbl_refresh">Get a new photo</string>
+    <string name="error_no_connection">Not connected</string>
+</resources>
